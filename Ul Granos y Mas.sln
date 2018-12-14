@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ul Granos y Mas", "Ul Granos y Mas\Ul Granos y Mas.csproj", "{C5DEF655-E0DA-4CDF-BBBB-6C7A935A9369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyImageButton", "MyImageButton\MyImageButton.csproj", "{E11735D0-CF34-4FA9-8061-23EA611BA82F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5DEF655-E0DA-4CDF-BBBB-6C7A935A9369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DEF655-E0DA-4CDF-BBBB-6C7A935A9369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DEF655-E0DA-4CDF-BBBB-6C7A935A9369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DEF655-E0DA-4CDF-BBBB-6C7A935A9369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11735D0-CF34-4FA9-8061-23EA611BA82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11735D0-CF34-4FA9-8061-23EA611BA82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11735D0-CF34-4FA9-8061-23EA611BA82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11735D0-CF34-4FA9-8061-23EA611BA82F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81DE82D3-44B5-4FCC-B1D6-CA51CE4439BE}
+	EndGlobalSection
+EndGlobal

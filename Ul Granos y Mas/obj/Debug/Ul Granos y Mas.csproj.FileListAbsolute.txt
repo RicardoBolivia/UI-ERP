@@ -1,0 +1,13 @@
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\bin\Debug\Ul Granos y Mas.exe.config
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\bin\Debug\Ul Granos y Mas.exe
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\bin\Debug\Ul Granos y Mas.pdb
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul_Granos_y_Mas.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul Granos y Mas.csproj.GenerateResource.cache
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul Granos y Mas.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul Granos y Mas.exe
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul Granos y Mas.pdb
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul_Granos_y_Mas.Form1.resources
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\bin\Debug\MyImageButton.dll
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\bin\Debug\MyImageButton.pdb
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul Granos y Mas.csprojAssemblyReference.cache
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\Ul Granos y Mas\obj\Debug\Ul Granos y Mas.csproj.CopyComplete

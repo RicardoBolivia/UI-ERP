@@ -1,0 +1,7 @@
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\bin\Debug\MyImageButton.dll
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\bin\Debug\MyImageButton.pdb
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\obj\Debug\MyImageButton.CustomImageButton.resources
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\obj\Debug\MyImageButton.csproj.GenerateResource.cache
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\obj\Debug\MyImageButton.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\obj\Debug\MyImageButton.dll
+C:\Users\Ricardo\Desktop\Ricardo\Granos y Mas Proyect\Ul Granos y Mas\MyImageButton\obj\Debug\MyImageButton.pdb
