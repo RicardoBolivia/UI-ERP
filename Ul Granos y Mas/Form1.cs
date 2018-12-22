@@ -10,39 +10,12 @@ namespace Ul_Granos_y_Mas
         public Form1()
         {
             InitializeComponent();
-        }
+            SetStyle(ControlStyles.ResizeRedraw, true);
+		}
 		private int R = 255;   
 		private int B = 0;   
 		private int G = 0;
-		private const int cGrip = 16;
-        private const int cCaption = 32;
-
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr)2;
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17;
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
-
-		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-		private extern static void ReleaseCapture();
-		[DllImport("user32.DLL", EntryPoint = "SendMessage")]
-
-		private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
+	
 		private void cibMenu_Click(object sender, EventArgs e)
 		{
 			if (pnlMenu.Width == 260)
@@ -53,30 +26,12 @@ namespace Ul_Granos_y_Mas
 
 		private void cibCerrar_Click(object sender, EventArgs e)
 		{
-			this.Close();
-		}
-
-		private void cibMaximizar_Click(object sender, EventArgs e)
-		{
-			if (cibMaximizar.Image == Properties.Resources.maximizarSF)
-			{
-				cibMaximizar.Image = Properties.Resources.restaurarNF;
-				cibMaximizar.ImageHover = Properties.Resources.restaurarSF;
-				cibMaximizar.ImageNormal = Properties.Resources.restaurarNF;
-				this.WindowState = FormWindowState.Normal;
-			}
-			else
-			{
-				cibMaximizar.Image = Properties.Resources.maximizarNF;
-				cibMaximizar.ImageHover = Properties.Resources.maximizarSF;
-				cibMaximizar.ImageNormal = Properties.Resources.maximizarNF;
-				this.WindowState = FormWindowState.Maximized;
-			}
+			Close();
 		}
 
 		private void cibMinimizar_Click(object sender, EventArgs e)
 		{
-			this.WindowState = FormWindowState.Minimized;
+			WindowState = FormWindowState.Minimized;
 		}
 
 		private void tmrTransicion_Tick(object sender, EventArgs e)
@@ -116,6 +71,62 @@ namespace Ul_Granos_y_Mas
 			}
 			lblLema.ForeColor = Color.FromArgb(R, G, B);
 			lblNombre.ForeColor = Color.FromArgb(R, G, B);
+		}
+		private void AbrirFormInPanel(object formHijo)
+		{
+			if (this.pnlFormPadre.Controls.Count > 0)
+				this.pnlFormPadre.Controls.RemoveAt(0);
+			Form fh = formHijo as Form;
+			fh.TopLevel = false;
+			fh.FormBorderStyle = FormBorderStyle.None;
+			fh.Dock = DockStyle.Fill;
+			this.pnlFormPadre.Controls.Add(fh);
+			this.pnlFormPadre.Tag = fh;
+			fh.Show();
+		}
+		private void btnBolsa_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void cibBolsas_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void btnCliente_Click(object sender, EventArgs e)
+		{
+			AbrirFormInPanel(new Clientes());
+			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
+			cibMenu_Click(sender, e);
+		}
+
+		private void cibCliente_Click(object sender, EventArgs e)
+		{
+			AbrirFormInPanel(new Clientes());
+			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
+			cibMenu_Click(sender, e);
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			Conexion cn = new Conexion();
+			if (!cn.Conectar())
+				System.Diagnostics.Process.Start("C:/wamp/wampmanager.exe");
+		}
+
+		private void btnProducto_Click(object sender, EventArgs e)
+		{
+			AbrirFormInPanel(new Productos());
+			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
+			cibMenu_Click(sender, e);
+		}
+
+		private void cibProducto_Click(object sender, EventArgs e)
+		{
+			AbrirFormInPanel(new Productos());
+			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
+			cibMenu_Click(sender, e);
 		}
 	}
 }

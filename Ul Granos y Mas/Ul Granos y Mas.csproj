@@ -32,8 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +183,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ClientesNF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProductoSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProductoNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notasDeEntregaNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notasDeEntregaSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComprasNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraficasNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraficasSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manualNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manualSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacionNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacionSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CompraSFs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InicioNF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InicioSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoSolo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
