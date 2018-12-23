@@ -112,7 +112,7 @@ namespace Ul_Granos_y_Mas
 		{
 			string fecha = date.Value.Year + "/" + date.Value.Month + "/" + date.Value.Day;
 			return fecha;
-		}
+		}		
 		public void LlenarComboBox(string consulta, ComboBox comboBox1, string mostrar)
 		{
 			conexion.Open();

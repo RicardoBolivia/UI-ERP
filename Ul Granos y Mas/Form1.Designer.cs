@@ -263,6 +263,7 @@
 			this.cibTabla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.cibTabla.TabIndex = 23;
 			this.cibTabla.TabStop = false;
+			this.cibTabla.Click += new System.EventHandler(this.cibTabla_Click);
 			// 
 			// cibGrafica
 			// 
@@ -348,6 +349,7 @@
 			this.btnTabla.Text = "Tabla";
 			this.btnTabla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnTabla.UseVisualStyleBackColor = false;
+			this.btnTabla.Click += new System.EventHandler(this.btnTabla_Click);
 			// 
 			// btnNotasDeEntrega
 			// 

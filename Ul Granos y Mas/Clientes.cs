@@ -11,7 +11,7 @@ namespace Ul_Granos_y_Mas
 		public Clientes()
 		{
 			InitializeComponent();
-			dgvClientes.DataSource = fn.llenarGrid("call load_table");
+			dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "', 'load')");
 		}
 		private void button6_Click(object sender, EventArgs e)
 		{
@@ -24,18 +24,18 @@ namespace Ul_Granos_y_Mas
 			{
 				if (rbtNit.Checked && txtNit.Text != "")
 				{
-					dgvClientes.DataSource = fn.llenarGrid("search_nit_cliente('" + txtNit.Text + "')");
+					dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','nit')");
 					BloquearControles(0);
 					HabilitarControles(4);
 				}
 				else if(txtNombre.Text != "")
 				{
-					dgvClientes.DataSource = fn.llenarGrid("call search_nombre_cliente('" + txtNombre.Text + "')");
+					dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','nombre')");
 					BloquearControles(0);
 					HabilitarControles(4);
 				}
 			}
-		}//
+		}//btnBuscar
 		private void button5_Click(object sender, EventArgs e)
 		{
 			if (btnNuevo.Text == "Nuevo")
@@ -46,10 +46,10 @@ namespace Ul_Granos_y_Mas
 			}//Se habilita El guardado de un nuevo cliente
 			else if (btnNuevo.Text == "Guardar Edicion")
 			{
-				if (txtNit.Text != "" && txtNit.Text != "")
+				if (txtNombre.Text != "" && txtNit.Text != "")
 				{
 					btnNuevo.Text = "Nuevo";
-					if (fn.actualizar("call edit_cliente('" + txtNit.Text + "', '" + txtNombre.Text + "', '" + id + "')"))
+					if (fn.actualizar("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','edit')"))
 						MessageBox.Show("Se actualizo correctamente la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 					else
 						MessageBox.Show("Error al actualizar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,7 +61,7 @@ namespace Ul_Granos_y_Mas
 			}//Se actualiza un cliente
 			else if (txtNit.Text != "" && txtNombre.Text != "")
 			{
-				if (fn.insertar("call create_clientes('" + txtNit.Text + "', '" + txtNombre.Text + "')"))
+				if (fn.insertar("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','save')"))
 					MessageBox.Show("Se guardo correctamente en la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 				else
 					MessageBox.Show("Error al insertar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,7 +71,7 @@ namespace Ul_Granos_y_Mas
 			}//Se guarda un nuevo cliente
 			else
 				MessageBox.Show("Porfavor iserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-			dgvClientes.DataSource = fn.llenarGrid("call load_table");
+			dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','load')");
 		}
 		private void BloquearControles(int caso)
 		{
@@ -167,11 +167,11 @@ namespace Ul_Granos_y_Mas
 			if (dgvClientes.SelectedRows.Count > 0)
 			{
 				id = dgvClientes.CurrentRow.Cells["Id"].Value.ToString();
-				if (fn.eliminar("call delete_clientes('" + id + "')"))
+				if (fn.eliminar("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','delete')"))
 					MessageBox.Show("Exito al eliminar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				else
 					MessageBox.Show("Error al eliminar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				dgvClientes.DataSource = fn.llenarGrid("call load_table");
+				dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','load')");
 			}
 			else
 				MessageBox.Show("Seleccione una columna", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -96,19 +96,24 @@ namespace Ul_Granos_y_Mas
 
 		private void btnCliente_Click(object sender, EventArgs e)
 		{
-			AbrirFormInPanel(new Clientes());
-			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
-			cibMenu_Click(sender, e);
+			if (pcbPestaña.Location.Y != cibCliente.Location.Y)
+			{
+				AbrirFormInPanel(new Clientes());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
+				pnlMenu.Width = 50;
+			}
 		}
 
 		private void cibCliente_Click(object sender, EventArgs e)
 		{
-			AbrirFormInPanel(new Clientes());
-			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
-			cibMenu_Click(sender, e);
+			if (pcbPestaña.Location.Y != cibCliente.Location.Y)
+			{
+				AbrirFormInPanel(new Clientes());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
+				pnlMenu.Width = 50;
+			}
 		}
-
-		private void Form1_Load(object sender, EventArgs e)
+			private void Form1_Load(object sender, EventArgs e)
 		{
 			Conexion cn = new Conexion();
 			if (!cn.Conectar())
@@ -117,16 +122,42 @@ namespace Ul_Granos_y_Mas
 
 		private void btnProducto_Click(object sender, EventArgs e)
 		{
-			AbrirFormInPanel(new Productos());
-			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
-			cibMenu_Click(sender, e);
+			if (pcbPestaña.Location.Y != cibProducto.Location.Y)
+			{
+				AbrirFormInPanel(new Productos());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
+				pnlMenu.Width = 50;
+			}
 		}
 
 		private void cibProducto_Click(object sender, EventArgs e)
 		{
-			AbrirFormInPanel(new Productos());
-			pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
-			cibMenu_Click(sender, e);
+			if (pcbPestaña.Location.Y != cibProducto.Location.Y)
+			{
+				AbrirFormInPanel(new Productos());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
+				pnlMenu.Width = 50;
+			}
+		}
+
+		private void btnTabla_Click(object sender, EventArgs e)
+		{
+			if (pcbPestaña.Location.Y != cibTabla.Location.Y)
+			{
+				AbrirFormInPanel(new Compra_de_insumos());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibTabla.Location.Y);
+				pnlMenu.Width = 50;
+			}
+		}
+
+		private void cibTabla_Click(object sender, EventArgs e)
+		{
+			if (pcbPestaña.Location.Y!= cibTabla.Location.Y)
+			{
+				AbrirFormInPanel(new Compra_de_insumos());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibTabla.Location.Y);
+				pnlMenu.Width = 50;
+			}			
 		}
 	}
 }

@@ -44,6 +44,7 @@
 			this.lblNombre = new System.Windows.Forms.Label();
 			this.txtNombre = new System.Windows.Forms.TextBox();
 			this.gbxOpciones = new System.Windows.Forms.GroupBox();
+			this.btnAcutalizar = new System.Windows.Forms.Button();
 			this.pnlSubMenu = new System.Windows.Forms.Panel();
 			this.rbtNombreCliente = new System.Windows.Forms.RadioButton();
 			this.rbtCliente = new System.Windows.Forms.RadioButton();
@@ -55,7 +56,6 @@
 			this.btnBuscar = new System.Windows.Forms.Button();
 			this.btnNuevo = new System.Windows.Forms.Button();
 			this.dgvProducto = new System.Windows.Forms.DataGridView();
-			this.btnAcutalizar = new System.Windows.Forms.Button();
 			this.pnlCabecera.SuspendLayout();
 			this.gbxDatos.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
@@ -102,7 +102,7 @@
 			this.gbxDatos.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
 			this.gbxDatos.Location = new System.Drawing.Point(0, 64);
 			this.gbxDatos.Name = "gbxDatos";
-			this.gbxDatos.Size = new System.Drawing.Size(1326, 0);
+			this.gbxDatos.Size = new System.Drawing.Size(1326, 136);
 			this.gbxDatos.TabIndex = 1;
 			this.gbxDatos.TabStop = false;
 			this.gbxDatos.Text = "Datos:";
@@ -158,12 +158,12 @@
 			// cbxCliente
 			// 
 			this.cbxCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.cbxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbxCliente.FormattingEnabled = true;
 			this.cbxCliente.Location = new System.Drawing.Point(794, 33);
 			this.cbxCliente.Name = "cbxCliente";
 			this.cbxCliente.Size = new System.Drawing.Size(226, 41);
 			this.cbxCliente.TabIndex = 6;
-			this.cbxCliente.Text = "-Escoja un Cliente-";
 			// 
 			// lblCliente
 			// 
@@ -216,12 +216,26 @@
 			this.gbxOpciones.Controls.Add(this.btnNuevo);
 			this.gbxOpciones.Dock = System.Windows.Forms.DockStyle.Top;
 			this.gbxOpciones.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-			this.gbxOpciones.Location = new System.Drawing.Point(0, 64);
+			this.gbxOpciones.Location = new System.Drawing.Point(0, 200);
 			this.gbxOpciones.Name = "gbxOpciones";
 			this.gbxOpciones.Size = new System.Drawing.Size(1326, 90);
 			this.gbxOpciones.TabIndex = 3;
 			this.gbxOpciones.TabStop = false;
 			this.gbxOpciones.Text = "Opciones:";
+			// 
+			// btnAcutalizar
+			// 
+			this.btnAcutalizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.btnAcutalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnAcutalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAcutalizar.Location = new System.Drawing.Point(1301, 16);
+			this.btnAcutalizar.Name = "btnAcutalizar";
+			this.btnAcutalizar.Size = new System.Drawing.Size(25, 27);
+			this.btnAcutalizar.TabIndex = 6;
+			this.btnAcutalizar.Text = "a";
+			this.btnAcutalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnAcutalizar.UseVisualStyleBackColor = false;
+			this.btnAcutalizar.Click += new System.EventHandler(this.btnAcutalizar_Click);
 			// 
 			// pnlSubMenu
 			// 
@@ -360,24 +374,10 @@
 			this.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(217)))));
 			this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dgvProducto.Location = new System.Drawing.Point(0, 154);
+			this.dgvProducto.Location = new System.Drawing.Point(0, 290);
 			this.dgvProducto.Name = "dgvProducto";
-			this.dgvProducto.Size = new System.Drawing.Size(1326, 506);
+			this.dgvProducto.Size = new System.Drawing.Size(1326, 370);
 			this.dgvProducto.TabIndex = 4;
-			// 
-			// btnAcutalizar
-			// 
-			this.btnAcutalizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnAcutalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
-			this.btnAcutalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAcutalizar.Location = new System.Drawing.Point(1301, 16);
-			this.btnAcutalizar.Name = "btnAcutalizar";
-			this.btnAcutalizar.Size = new System.Drawing.Size(25, 27);
-			this.btnAcutalizar.TabIndex = 6;
-			this.btnAcutalizar.Text = "a";
-			this.btnAcutalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnAcutalizar.UseVisualStyleBackColor = false;
-			this.btnAcutalizar.Click += new System.EventHandler(this.btnAcutalizar_Click);
 			// 
 			// Productos
 			// 
