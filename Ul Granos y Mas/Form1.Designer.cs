@@ -30,419 +30,61 @@
         {
 			this.components = new System.ComponentModel.Container();
 			this.pnlMenu = new System.Windows.Forms.Panel();
-			this.cibInicio = new MyImageButton.CustomImageButton();
-			this.cibCalculadora = new MyImageButton.CustomImageButton();
-			this.cibBolsas = new MyImageButton.CustomImageButton();
-			this.cibCliente = new MyImageButton.CustomImageButton();
-			this.cibProducto = new MyImageButton.CustomImageButton();
-			this.cibNotasDeEntrega = new MyImageButton.CustomImageButton();
-			this.pcbPestaña = new System.Windows.Forms.PictureBox();
-			this.btnInicio = new System.Windows.Forms.Button();
-			this.cibManual = new MyImageButton.CustomImageButton();
-			this.cibAcercaDe = new MyImageButton.CustomImageButton();
-			this.cibTabla = new MyImageButton.CustomImageButton();
-			this.cibGrafica = new MyImageButton.CustomImageButton();
-			this.btnManual = new System.Windows.Forms.Button();
-			this.btnAcercaDe = new System.Windows.Forms.Button();
-			this.btnGraficasYEstadisticas = new System.Windows.Forms.Button();
-			this.btnTabla = new System.Windows.Forms.Button();
-			this.btnNotasDeEntrega = new System.Windows.Forms.Button();
-			this.btnProducto = new System.Windows.Forms.Button();
-			this.btnCliente = new System.Windows.Forms.Button();
-			this.btnCalculadora = new System.Windows.Forms.Button();
-			this.btnBolsa = new System.Windows.Forms.Button();
 			this.lblLema = new System.Windows.Forms.Label();
 			this.lblNombre = new System.Windows.Forms.Label();
-			this.pcbLogo = new System.Windows.Forms.PictureBox();
 			this.pnlCabecera = new System.Windows.Forms.Panel();
+			this.pnlFormPadre = new System.Windows.Forms.Panel();
+			this.tmrTransicion = new System.Windows.Forms.Timer(this.components);
 			this.cibMinimizar = new MyImageButton.CustomImageButton();
 			this.cibEspacio1 = new MyImageButton.CustomImageButton();
 			this.cibCerrar = new MyImageButton.CustomImageButton();
 			this.cibEspacio0 = new MyImageButton.CustomImageButton();
 			this.cibMenu = new MyImageButton.CustomImageButton();
-			this.pnlFormPadre = new System.Windows.Forms.Panel();
-			this.tmrTransicion = new System.Windows.Forms.Timer(this.components);
+			this.pcbPestaña = new System.Windows.Forms.PictureBox();
+			this.pcbLogo = new System.Windows.Forms.PictureBox();
+			this.btnGrafica = new imageButton.buttonImage();
+			this.btnInicio = new imageButton.buttonImage();
+			this.btbBolsas = new imageButton.buttonImage();
+			this.btnCalculadora = new imageButton.buttonImage();
+			this.btnCliente = new imageButton.buttonImage();
+			this.btnProducto = new imageButton.buttonImage();
+			this.btnNotas = new imageButton.buttonImage();
+			this.btnTablas = new imageButton.buttonImage();
+			this.btnManual = new imageButton.buttonImage();
+			this.btnAcercaDe = new imageButton.buttonImage();
 			this.pnlMenu.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.cibInicio)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibCalculadora)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibBolsas)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibCliente)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibProducto)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibNotasDeEntrega)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pcbPestaña)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibManual)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibAcercaDe)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibTabla)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibGrafica)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
 			this.pnlCabecera.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cibMinimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibEspacio1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibCerrar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibEspacio0)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibMenu)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pcbPestaña)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pnlMenu
 			// 
 			this.pnlMenu.BackColor = System.Drawing.Color.Black;
-			this.pnlMenu.Controls.Add(this.cibInicio);
-			this.pnlMenu.Controls.Add(this.cibCalculadora);
-			this.pnlMenu.Controls.Add(this.cibBolsas);
-			this.pnlMenu.Controls.Add(this.cibCliente);
-			this.pnlMenu.Controls.Add(this.cibProducto);
-			this.pnlMenu.Controls.Add(this.cibNotasDeEntrega);
+			this.pnlMenu.Controls.Add(this.btnGrafica);
 			this.pnlMenu.Controls.Add(this.pcbPestaña);
 			this.pnlMenu.Controls.Add(this.btnInicio);
-			this.pnlMenu.Controls.Add(this.cibManual);
-			this.pnlMenu.Controls.Add(this.cibAcercaDe);
-			this.pnlMenu.Controls.Add(this.cibTabla);
-			this.pnlMenu.Controls.Add(this.cibGrafica);
-			this.pnlMenu.Controls.Add(this.btnManual);
-			this.pnlMenu.Controls.Add(this.btnAcercaDe);
-			this.pnlMenu.Controls.Add(this.btnGraficasYEstadisticas);
-			this.pnlMenu.Controls.Add(this.btnTabla);
-			this.pnlMenu.Controls.Add(this.btnNotasDeEntrega);
-			this.pnlMenu.Controls.Add(this.btnProducto);
-			this.pnlMenu.Controls.Add(this.btnCliente);
+			this.pnlMenu.Controls.Add(this.btbBolsas);
 			this.pnlMenu.Controls.Add(this.btnCalculadora);
-			this.pnlMenu.Controls.Add(this.btnBolsa);
+			this.pnlMenu.Controls.Add(this.btnCliente);
+			this.pnlMenu.Controls.Add(this.btnProducto);
+			this.pnlMenu.Controls.Add(this.btnNotas);
+			this.pnlMenu.Controls.Add(this.btnTablas);
 			this.pnlMenu.Controls.Add(this.lblLema);
 			this.pnlMenu.Controls.Add(this.lblNombre);
 			this.pnlMenu.Controls.Add(this.pcbLogo);
+			this.pnlMenu.Controls.Add(this.btnManual);
+			this.pnlMenu.Controls.Add(this.btnAcercaDe);
 			this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
 			this.pnlMenu.Location = new System.Drawing.Point(0, 0);
 			this.pnlMenu.Name = "pnlMenu";
 			this.pnlMenu.Size = new System.Drawing.Size(260, 705);
 			this.pnlMenu.TabIndex = 1;
-			// 
-			// cibInicio
-			// 
-			this.cibInicio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibInicio.Image = global::Ul_Granos_y_Mas.Properties.Resources.InicioNF;
-			this.cibInicio.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.InicioSF;
-			this.cibInicio.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.InicioNF;
-			this.cibInicio.Location = new System.Drawing.Point(6, 89);
-			this.cibInicio.Name = "cibInicio";
-			this.cibInicio.Size = new System.Drawing.Size(38, 38);
-			this.cibInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibInicio.TabIndex = 31;
-			this.cibInicio.TabStop = false;
-			// 
-			// cibCalculadora
-			// 
-			this.cibCalculadora.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibCalculadora.Image = global::Ul_Granos_y_Mas.Properties.Resources.CalculadoraNF;
-			this.cibCalculadora.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.CalculadoraSF;
-			this.cibCalculadora.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.CalculadoraNF;
-			this.cibCalculadora.Location = new System.Drawing.Point(6, 173);
-			this.cibCalculadora.Name = "cibCalculadora";
-			this.cibCalculadora.Size = new System.Drawing.Size(38, 38);
-			this.cibCalculadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibCalculadora.TabIndex = 21;
-			this.cibCalculadora.TabStop = false;
-			// 
-			// cibBolsas
-			// 
-			this.cibBolsas.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibBolsas.Image = global::Ul_Granos_y_Mas.Properties.Resources.BolsasNF;
-			this.cibBolsas.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.BolsasSF;
-			this.cibBolsas.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.BolsasNF;
-			this.cibBolsas.Location = new System.Drawing.Point(6, 133);
-			this.cibBolsas.Name = "cibBolsas";
-			this.cibBolsas.Size = new System.Drawing.Size(38, 38);
-			this.cibBolsas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibBolsas.TabIndex = 20;
-			this.cibBolsas.TabStop = false;
-			this.cibBolsas.Click += new System.EventHandler(this.cibBolsas_Click);
-			// 
-			// cibCliente
-			// 
-			this.cibCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibCliente.Image = global::Ul_Granos_y_Mas.Properties.Resources.ClientesNF;
-			this.cibCliente.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.ClientesSF;
-			this.cibCliente.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.ClientesNF;
-			this.cibCliente.Location = new System.Drawing.Point(6, 213);
-			this.cibCliente.Name = "cibCliente";
-			this.cibCliente.Size = new System.Drawing.Size(38, 38);
-			this.cibCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibCliente.TabIndex = 26;
-			this.cibCliente.TabStop = false;
-			this.cibCliente.Click += new System.EventHandler(this.cibCliente_Click);
-			// 
-			// cibProducto
-			// 
-			this.cibProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibProducto.Image = global::Ul_Granos_y_Mas.Properties.Resources.ProductoNF;
-			this.cibProducto.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.ProductoSF;
-			this.cibProducto.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.ProductoNF;
-			this.cibProducto.Location = new System.Drawing.Point(6, 253);
-			this.cibProducto.Name = "cibProducto";
-			this.cibProducto.Size = new System.Drawing.Size(38, 38);
-			this.cibProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibProducto.TabIndex = 25;
-			this.cibProducto.TabStop = false;
-			this.cibProducto.Click += new System.EventHandler(this.cibProducto_Click);
-			// 
-			// cibNotasDeEntrega
-			// 
-			this.cibNotasDeEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibNotasDeEntrega.Image = global::Ul_Granos_y_Mas.Properties.Resources.notasDeEntregaNF;
-			this.cibNotasDeEntrega.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.notasDeEntregaSF;
-			this.cibNotasDeEntrega.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.notasDeEntregaNF;
-			this.cibNotasDeEntrega.Location = new System.Drawing.Point(6, 293);
-			this.cibNotasDeEntrega.Name = "cibNotasDeEntrega";
-			this.cibNotasDeEntrega.Size = new System.Drawing.Size(38, 38);
-			this.cibNotasDeEntrega.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibNotasDeEntrega.TabIndex = 24;
-			this.cibNotasDeEntrega.TabStop = false;
-			// 
-			// pcbPestaña
-			// 
-			this.pcbPestaña.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.pcbPestaña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(15)))), ((int)(((byte)(10)))));
-			this.pcbPestaña.Location = new System.Drawing.Point(0, 89);
-			this.pcbPestaña.Name = "pcbPestaña";
-			this.pcbPestaña.Size = new System.Drawing.Size(7, 38);
-			this.pcbPestaña.TabIndex = 29;
-			this.pcbPestaña.TabStop = false;
-			// 
-			// btnInicio
-			// 
-			this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnInicio.FlatAppearance.BorderSize = 0;
-			this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnInicio.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnInicio.Location = new System.Drawing.Point(0, 89);
-			this.btnInicio.Name = "btnInicio";
-			this.btnInicio.Size = new System.Drawing.Size(260, 38);
-			this.btnInicio.TabIndex = 30;
-			this.btnInicio.Text = "Inicio";
-			this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnInicio.UseVisualStyleBackColor = false;
-			// 
-			// cibManual
-			// 
-			this.cibManual.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibManual.Image = global::Ul_Granos_y_Mas.Properties.Resources.manualNF;
-			this.cibManual.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.manualSF;
-			this.cibManual.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.manualNF;
-			this.cibManual.Location = new System.Drawing.Point(6, 629);
-			this.cibManual.Name = "cibManual";
-			this.cibManual.Size = new System.Drawing.Size(38, 38);
-			this.cibManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibManual.TabIndex = 28;
-			this.cibManual.TabStop = false;
-			// 
-			// cibAcercaDe
-			// 
-			this.cibAcercaDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibAcercaDe.Image = global::Ul_Granos_y_Mas.Properties.Resources.informacionNF;
-			this.cibAcercaDe.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.informacionSF;
-			this.cibAcercaDe.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.informacionNF;
-			this.cibAcercaDe.Location = new System.Drawing.Point(6, 667);
-			this.cibAcercaDe.Name = "cibAcercaDe";
-			this.cibAcercaDe.Size = new System.Drawing.Size(38, 38);
-			this.cibAcercaDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibAcercaDe.TabIndex = 27;
-			this.cibAcercaDe.TabStop = false;
-			// 
-			// cibTabla
-			// 
-			this.cibTabla.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibTabla.Image = global::Ul_Granos_y_Mas.Properties.Resources.ComprasNF;
-			this.cibTabla.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.CompraSFs;
-			this.cibTabla.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.ComprasNF;
-			this.cibTabla.Location = new System.Drawing.Point(6, 333);
-			this.cibTabla.Name = "cibTabla";
-			this.cibTabla.Size = new System.Drawing.Size(38, 38);
-			this.cibTabla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibTabla.TabIndex = 23;
-			this.cibTabla.TabStop = false;
-			this.cibTabla.Click += new System.EventHandler(this.cibTabla_Click);
-			// 
-			// cibGrafica
-			// 
-			this.cibGrafica.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.cibGrafica.Image = global::Ul_Granos_y_Mas.Properties.Resources.GraficasNF;
-			this.cibGrafica.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.GraficasSF;
-			this.cibGrafica.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.GraficasNF;
-			this.cibGrafica.Location = new System.Drawing.Point(6, 373);
-			this.cibGrafica.Name = "cibGrafica";
-			this.cibGrafica.Size = new System.Drawing.Size(38, 38);
-			this.cibGrafica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.cibGrafica.TabIndex = 22;
-			this.cibGrafica.TabStop = false;
-			// 
-			// btnManual
-			// 
-			this.btnManual.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnManual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnManual.FlatAppearance.BorderSize = 0;
-			this.btnManual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManual.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnManual.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnManual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnManual.Location = new System.Drawing.Point(0, 629);
-			this.btnManual.Name = "btnManual";
-			this.btnManual.Size = new System.Drawing.Size(260, 38);
-			this.btnManual.TabIndex = 19;
-			this.btnManual.Text = "Manual";
-			this.btnManual.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnManual.UseVisualStyleBackColor = false;
-			// 
-			// btnAcercaDe
-			// 
-			this.btnAcercaDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnAcercaDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnAcercaDe.FlatAppearance.BorderSize = 0;
-			this.btnAcercaDe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAcercaDe.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnAcercaDe.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnAcercaDe.Location = new System.Drawing.Point(0, 667);
-			this.btnAcercaDe.Name = "btnAcercaDe";
-			this.btnAcercaDe.Size = new System.Drawing.Size(260, 38);
-			this.btnAcercaDe.TabIndex = 18;
-			this.btnAcercaDe.Text = "Acerca de";
-			this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnAcercaDe.UseVisualStyleBackColor = false;
-			// 
-			// btnGraficasYEstadisticas
-			// 
-			this.btnGraficasYEstadisticas.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnGraficasYEstadisticas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnGraficasYEstadisticas.FlatAppearance.BorderSize = 0;
-			this.btnGraficasYEstadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnGraficasYEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnGraficasYEstadisticas.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnGraficasYEstadisticas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnGraficasYEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGraficasYEstadisticas.Location = new System.Drawing.Point(0, 373);
-			this.btnGraficasYEstadisticas.Name = "btnGraficasYEstadisticas";
-			this.btnGraficasYEstadisticas.Size = new System.Drawing.Size(260, 38);
-			this.btnGraficasYEstadisticas.TabIndex = 17;
-			this.btnGraficasYEstadisticas.Text = "Grafica y Estadistica";
-			this.btnGraficasYEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnGraficasYEstadisticas.UseVisualStyleBackColor = false;
-			// 
-			// btnTabla
-			// 
-			this.btnTabla.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnTabla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnTabla.FlatAppearance.BorderSize = 0;
-			this.btnTabla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTabla.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnTabla.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnTabla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnTabla.Location = new System.Drawing.Point(0, 333);
-			this.btnTabla.Name = "btnTabla";
-			this.btnTabla.Size = new System.Drawing.Size(260, 38);
-			this.btnTabla.TabIndex = 16;
-			this.btnTabla.Text = "Tabla";
-			this.btnTabla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnTabla.UseVisualStyleBackColor = false;
-			this.btnTabla.Click += new System.EventHandler(this.btnTabla_Click);
-			// 
-			// btnNotasDeEntrega
-			// 
-			this.btnNotasDeEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnNotasDeEntrega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnNotasDeEntrega.FlatAppearance.BorderSize = 0;
-			this.btnNotasDeEntrega.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnNotasDeEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNotasDeEntrega.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnNotasDeEntrega.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnNotasDeEntrega.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnNotasDeEntrega.Location = new System.Drawing.Point(0, 293);
-			this.btnNotasDeEntrega.Name = "btnNotasDeEntrega";
-			this.btnNotasDeEntrega.Size = new System.Drawing.Size(260, 38);
-			this.btnNotasDeEntrega.TabIndex = 15;
-			this.btnNotasDeEntrega.Text = "Notas de entrega";
-			this.btnNotasDeEntrega.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnNotasDeEntrega.UseVisualStyleBackColor = false;
-			// 
-			// btnProducto
-			// 
-			this.btnProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnProducto.FlatAppearance.BorderSize = 0;
-			this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnProducto.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnProducto.Location = new System.Drawing.Point(0, 253);
-			this.btnProducto.Name = "btnProducto";
-			this.btnProducto.Size = new System.Drawing.Size(260, 38);
-			this.btnProducto.TabIndex = 14;
-			this.btnProducto.Text = "Producto";
-			this.btnProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnProducto.UseVisualStyleBackColor = false;
-			this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-			// 
-			// btnCliente
-			// 
-			this.btnCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnCliente.FlatAppearance.BorderSize = 0;
-			this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCliente.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCliente.Location = new System.Drawing.Point(0, 213);
-			this.btnCliente.Name = "btnCliente";
-			this.btnCliente.Size = new System.Drawing.Size(260, 38);
-			this.btnCliente.TabIndex = 13;
-			this.btnCliente.Text = "Cliente";
-			this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnCliente.UseVisualStyleBackColor = false;
-			this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-			// 
-			// btnCalculadora
-			// 
-			this.btnCalculadora.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnCalculadora.FlatAppearance.BorderSize = 0;
-			this.btnCalculadora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnCalculadora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCalculadora.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnCalculadora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnCalculadora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCalculadora.Location = new System.Drawing.Point(0, 173);
-			this.btnCalculadora.Name = "btnCalculadora";
-			this.btnCalculadora.Size = new System.Drawing.Size(260, 38);
-			this.btnCalculadora.TabIndex = 12;
-			this.btnCalculadora.Text = "Calculadora";
-			this.btnCalculadora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnCalculadora.UseVisualStyleBackColor = false;
-			// 
-			// btnBolsa
-			// 
-			this.btnBolsa.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.btnBolsa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnBolsa.FlatAppearance.BorderSize = 0;
-			this.btnBolsa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-			this.btnBolsa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnBolsa.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-			this.btnBolsa.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnBolsa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnBolsa.Location = new System.Drawing.Point(0, 131);
-			this.btnBolsa.Name = "btnBolsa";
-			this.btnBolsa.Size = new System.Drawing.Size(260, 38);
-			this.btnBolsa.TabIndex = 11;
-			this.btnBolsa.Text = "Bolsas";
-			this.btnBolsa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnBolsa.UseVisualStyleBackColor = false;
-			this.btnBolsa.Click += new System.EventHandler(this.btnBolsa_Click);
 			// 
 			// lblLema
 			// 
@@ -466,18 +108,6 @@
 			this.lblNombre.TabIndex = 9;
 			this.lblNombre.Text = "GRANOS Y MAS";
 			// 
-			// pcbLogo
-			// 
-			this.pcbLogo.BackgroundImage = global::Ul_Granos_y_Mas.Properties.Resources.logoTransparente;
-			this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pcbLogo.Image = global::Ul_Granos_y_Mas.Properties.Resources.logoSolo;
-			this.pcbLogo.Location = new System.Drawing.Point(1, 1);
-			this.pcbLogo.Name = "pcbLogo";
-			this.pcbLogo.Size = new System.Drawing.Size(50, 45);
-			this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pcbLogo.TabIndex = 0;
-			this.pcbLogo.TabStop = false;
-			// 
 			// pnlCabecera
 			// 
 			this.pnlCabecera.BackColor = System.Drawing.Color.Black;
@@ -491,6 +121,20 @@
 			this.pnlCabecera.Name = "pnlCabecera";
 			this.pnlCabecera.Size = new System.Drawing.Size(1106, 45);
 			this.pnlCabecera.TabIndex = 3;
+			// 
+			// pnlFormPadre
+			// 
+			this.pnlFormPadre.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlFormPadre.Location = new System.Drawing.Point(260, 45);
+			this.pnlFormPadre.Name = "pnlFormPadre";
+			this.pnlFormPadre.Size = new System.Drawing.Size(1106, 660);
+			this.pnlFormPadre.TabIndex = 4;
+			// 
+			// tmrTransicion
+			// 
+			this.tmrTransicion.Enabled = true;
+			this.tmrTransicion.Interval = 5;
+			this.tmrTransicion.Tick += new System.EventHandler(this.tmrTransicion_Tick);
 			// 
 			// cibMinimizar
 			// 
@@ -556,19 +200,242 @@
 			this.cibMenu.TabStop = false;
 			this.cibMenu.Click += new System.EventHandler(this.cibMenu_Click);
 			// 
-			// pnlFormPadre
+			// pcbPestaña
 			// 
-			this.pnlFormPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlFormPadre.Location = new System.Drawing.Point(260, 45);
-			this.pnlFormPadre.Name = "pnlFormPadre";
-			this.pnlFormPadre.Size = new System.Drawing.Size(1106, 660);
-			this.pnlFormPadre.TabIndex = 4;
+			this.pcbPestaña.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.pcbPestaña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(15)))), ((int)(((byte)(10)))));
+			this.pcbPestaña.Location = new System.Drawing.Point(0, 89);
+			this.pcbPestaña.Name = "pcbPestaña";
+			this.pcbPestaña.Size = new System.Drawing.Size(7, 50);
+			this.pcbPestaña.TabIndex = 29;
+			this.pcbPestaña.TabStop = false;
 			// 
-			// tmrTransicion
+			// pcbLogo
 			// 
-			this.tmrTransicion.Enabled = true;
-			this.tmrTransicion.Interval = 5;
-			this.tmrTransicion.Tick += new System.EventHandler(this.tmrTransicion_Tick);
+			this.pcbLogo.BackgroundImage = global::Ul_Granos_y_Mas.Properties.Resources.logoTransparente;
+			this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pcbLogo.Image = global::Ul_Granos_y_Mas.Properties.Resources.logoSolo;
+			this.pcbLogo.Location = new System.Drawing.Point(1, 1);
+			this.pcbLogo.Name = "pcbLogo";
+			this.pcbLogo.Size = new System.Drawing.Size(50, 45);
+			this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pcbLogo.TabIndex = 0;
+			this.pcbLogo.TabStop = false;
+			// 
+			// btnGrafica
+			// 
+			this.btnGrafica.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnGrafica.BackColor = System.Drawing.Color.Black;
+			this.btnGrafica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnGrafica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnGrafica.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnGrafica.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnGrafica.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnGrafica.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.GraficasSF;
+			this.btnGrafica.Image = global::Ul_Granos_y_Mas.Properties.Resources.GraficasNF;
+			this.btnGrafica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnGrafica.Location = new System.Drawing.Point(1, 439);
+			this.btnGrafica.Name = "btnGrafica";
+			this.btnGrafica.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.GraficasNF;
+			this.btnGrafica.Size = new System.Drawing.Size(260, 50);
+			this.btnGrafica.TabIndex = 33;
+			this.btnGrafica.Text = "Grafica y Estadistica";
+			this.btnGrafica.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnGrafica.UseVisualStyleBackColor = false;
+			// 
+			// btnInicio
+			// 
+			this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnInicio.BackColor = System.Drawing.Color.Black;
+			this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnInicio.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnInicio.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnInicio.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnInicio.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.InicioSF;
+			this.btnInicio.Image = global::Ul_Granos_y_Mas.Properties.Resources.InicioNF;
+			this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnInicio.Location = new System.Drawing.Point(1, 89);
+			this.btnInicio.Name = "btnInicio";
+			this.btnInicio.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.InicioNF;
+			this.btnInicio.Size = new System.Drawing.Size(260, 50);
+			this.btnInicio.TabIndex = 32;
+			this.btnInicio.Text = "Inicio";
+			this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnInicio.UseVisualStyleBackColor = false;
+			this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+			// 
+			// btbBolsas
+			// 
+			this.btbBolsas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btbBolsas.BackColor = System.Drawing.Color.Black;
+			this.btbBolsas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btbBolsas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btbBolsas.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btbBolsas.ForeColor = System.Drawing.SystemColors.Control;
+			this.btbBolsas.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btbBolsas.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.BolsasSF;
+			this.btbBolsas.Image = global::Ul_Granos_y_Mas.Properties.Resources.BolsasNF;
+			this.btbBolsas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btbBolsas.Location = new System.Drawing.Point(1, 139);
+			this.btbBolsas.Name = "btbBolsas";
+			this.btbBolsas.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.BolsasNF;
+			this.btbBolsas.Size = new System.Drawing.Size(260, 50);
+			this.btbBolsas.TabIndex = 32;
+			this.btbBolsas.Text = "Bolsas";
+			this.btbBolsas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btbBolsas.UseVisualStyleBackColor = false;
+			// 
+			// btnCalculadora
+			// 
+			this.btnCalculadora.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnCalculadora.BackColor = System.Drawing.Color.Black;
+			this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnCalculadora.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnCalculadora.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnCalculadora.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnCalculadora.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnCalculadora.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.CalculadoraSF;
+			this.btnCalculadora.Image = global::Ul_Granos_y_Mas.Properties.Resources.CalculadoraNF;
+			this.btnCalculadora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnCalculadora.Location = new System.Drawing.Point(1, 189);
+			this.btnCalculadora.Name = "btnCalculadora";
+			this.btnCalculadora.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.CalculadoraNF;
+			this.btnCalculadora.Size = new System.Drawing.Size(260, 50);
+			this.btnCalculadora.TabIndex = 32;
+			this.btnCalculadora.Text = "Calculadora";
+			this.btnCalculadora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnCalculadora.UseVisualStyleBackColor = false;
+			// 
+			// btnCliente
+			// 
+			this.btnCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnCliente.BackColor = System.Drawing.Color.Black;
+			this.btnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnCliente.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnCliente.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnCliente.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnCliente.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.ClientesSF;
+			this.btnCliente.Image = global::Ul_Granos_y_Mas.Properties.Resources.ClientesNF;
+			this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnCliente.Location = new System.Drawing.Point(1, 239);
+			this.btnCliente.Name = "btnCliente";
+			this.btnCliente.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.ClientesNF;
+			this.btnCliente.Size = new System.Drawing.Size(260, 50);
+			this.btnCliente.TabIndex = 32;
+			this.btnCliente.Text = "Cliente";
+			this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnCliente.UseVisualStyleBackColor = false;
+			this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click_1);
+			// 
+			// btnProducto
+			// 
+			this.btnProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnProducto.BackColor = System.Drawing.Color.Black;
+			this.btnProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnProducto.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnProducto.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnProducto.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnProducto.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.ProductoSF;
+			this.btnProducto.Image = global::Ul_Granos_y_Mas.Properties.Resources.ProductoNF;
+			this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnProducto.Location = new System.Drawing.Point(1, 289);
+			this.btnProducto.Name = "btnProducto";
+			this.btnProducto.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.ProductoNF;
+			this.btnProducto.Size = new System.Drawing.Size(260, 50);
+			this.btnProducto.TabIndex = 32;
+			this.btnProducto.Text = "Producto";
+			this.btnProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnProducto.UseVisualStyleBackColor = false;
+			this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click_1);
+			// 
+			// btnNotas
+			// 
+			this.btnNotas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnNotas.BackColor = System.Drawing.Color.Black;
+			this.btnNotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnNotas.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnNotas.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnNotas.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnNotas.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.notasDeEntregaSF;
+			this.btnNotas.Image = global::Ul_Granos_y_Mas.Properties.Resources.notasDeEntregaNF;
+			this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNotas.Location = new System.Drawing.Point(1, 339);
+			this.btnNotas.Name = "btnNotas";
+			this.btnNotas.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.notasDeEntregaNF;
+			this.btnNotas.Size = new System.Drawing.Size(260, 50);
+			this.btnNotas.TabIndex = 32;
+			this.btnNotas.Text = "Notas de entrega";
+			this.btnNotas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnNotas.UseVisualStyleBackColor = false;
+			// 
+			// btnTablas
+			// 
+			this.btnTablas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnTablas.BackColor = System.Drawing.Color.Black;
+			this.btnTablas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnTablas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnTablas.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnTablas.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnTablas.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnTablas.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.CompraSFs;
+			this.btnTablas.Image = global::Ul_Granos_y_Mas.Properties.Resources.ComprasNF;
+			this.btnTablas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnTablas.Location = new System.Drawing.Point(1, 389);
+			this.btnTablas.Name = "btnTablas";
+			this.btnTablas.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.ComprasNF;
+			this.btnTablas.Size = new System.Drawing.Size(260, 50);
+			this.btnTablas.TabIndex = 32;
+			this.btnTablas.Text = "Tabla de Com. y Gan.";
+			this.btnTablas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnTablas.UseVisualStyleBackColor = false;
+			this.btnTablas.Click += new System.EventHandler(this.btnTablas_Click);
+			// 
+			// btnManual
+			// 
+			this.btnManual.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnManual.BackColor = System.Drawing.Color.Black;
+			this.btnManual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnManual.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnManual.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnManual.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnManual.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnManual.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.manualSF;
+			this.btnManual.Image = global::Ul_Granos_y_Mas.Properties.Resources.manualNF;
+			this.btnManual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnManual.Location = new System.Drawing.Point(0, 601);
+			this.btnManual.Name = "btnManual";
+			this.btnManual.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.manualNF;
+			this.btnManual.Size = new System.Drawing.Size(260, 50);
+			this.btnManual.TabIndex = 32;
+			this.btnManual.Text = "Manual";
+			this.btnManual.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnManual.UseVisualStyleBackColor = false;
+			this.btnManual.Click += new System.EventHandler(this.btnTablas_Click);
+			// 
+			// btnAcercaDe
+			// 
+			this.btnAcercaDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnAcercaDe.BackColor = System.Drawing.Color.Black;
+			this.btnAcercaDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnAcercaDe.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold);
+			this.btnAcercaDe.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnAcercaDe.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnAcercaDe.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.informacionSF;
+			this.btnAcercaDe.Image = global::Ul_Granos_y_Mas.Properties.Resources.informacionNF;
+			this.btnAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnAcercaDe.Location = new System.Drawing.Point(0, 651);
+			this.btnAcercaDe.Name = "btnAcercaDe";
+			this.btnAcercaDe.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.informacionNF;
+			this.btnAcercaDe.Size = new System.Drawing.Size(260, 50);
+			this.btnAcercaDe.TabIndex = 32;
+			this.btnAcercaDe.Text = "Acerca De";
+			this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnAcercaDe.UseVisualStyleBackColor = false;
 			// 
 			// Form1
 			// 
@@ -588,24 +455,14 @@
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.pnlMenu.ResumeLayout(false);
 			this.pnlMenu.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.cibInicio)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibCalculadora)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibBolsas)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibCliente)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibProducto)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibNotasDeEntrega)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pcbPestaña)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibManual)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibAcercaDe)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibTabla)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cibGrafica)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
 			this.pnlCabecera.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.cibMinimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibEspacio1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibCerrar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibEspacio0)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cibMenu)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pcbPestaña)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -622,28 +479,18 @@
 		private MyImageButton.CustomImageButton cibEspacio1;
 		private MyImageButton.CustomImageButton cibCerrar;
 		private MyImageButton.CustomImageButton cibEspacio0;
-		private MyImageButton.CustomImageButton cibCliente;
-		private MyImageButton.CustomImageButton cibProducto;
-		private MyImageButton.CustomImageButton cibNotasDeEntrega;
-		private MyImageButton.CustomImageButton cibTabla;
-		private MyImageButton.CustomImageButton cibGrafica;
-		private MyImageButton.CustomImageButton cibCalculadora;
-		private MyImageButton.CustomImageButton cibBolsas;
-		private System.Windows.Forms.Button btnManual;
-		private System.Windows.Forms.Button btnAcercaDe;
-		private System.Windows.Forms.Button btnGraficasYEstadisticas;
-		private System.Windows.Forms.Button btnTabla;
-		private System.Windows.Forms.Button btnNotasDeEntrega;
-		private System.Windows.Forms.Button btnProducto;
-		private System.Windows.Forms.Button btnCliente;
-		private System.Windows.Forms.Button btnCalculadora;
-		private System.Windows.Forms.Button btnBolsa;
-		private MyImageButton.CustomImageButton cibManual;
-		private MyImageButton.CustomImageButton cibAcercaDe;
 		private System.Windows.Forms.Timer tmrTransicion;
 		private System.Windows.Forms.PictureBox pcbPestaña;
-		private MyImageButton.CustomImageButton cibInicio;
-		private System.Windows.Forms.Button btnInicio;
+		private imageButton.buttonImage btnInicio;
+		private imageButton.buttonImage btbBolsas;
+		private imageButton.buttonImage btnCalculadora;
+		private imageButton.buttonImage btnCliente;
+		private imageButton.buttonImage btnProducto;
+		private imageButton.buttonImage btnNotas;
+		private imageButton.buttonImage btnTablas;
+		private imageButton.buttonImage btnAcercaDe;
+		private imageButton.buttonImage btnManual;
+		private imageButton.buttonImage btnGrafica;
 	}
 }
 

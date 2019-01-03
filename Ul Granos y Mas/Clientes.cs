@@ -13,30 +13,98 @@ namespace Ul_Granos_y_Mas
 			InitializeComponent();
 			dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "', 'load')");
 		}
-		private void button6_Click(object sender, EventArgs e)
+		private void BloquearControles(int caso)
 		{
-			if (gbxDatos.Height == 0)
+			switch (caso)
 			{
-				gbxOpciones.Size = new Size(1326, 170);
-				panel3.Visible = true;
+				case 0://Oculta todo el gbxDatos
+					gbxDatos.Size = new Size(1326, 0);
+					txtNit.Clear();
+					txtNombre.Clear();
+					break;
+				case 1://Bloquea el funcionamiento de todo menos btnNuevo
+					btnBuscar.Enabled = false;
+					btnEditar.Enabled = false;
+					btnEliminar.Enabled = false;
+					break;
+				case 2://Bloquea el funcionamiento de todo menos btnBuscar
+					btnNuevo.Enabled = false;
+					btnEditar.Enabled = false;
+					btnEliminar.Enabled = false;
+					break;
+			}
+		}
+		private void HabilitarControles(int caso)
+		{
+			switch (caso)
+			{
+				case 0://Habilita todo el gbxDatos
+					lblNit.Visible = true;
+					lblNombre2.Visible = true;
+					txtNombre.Visible = true;
+					txtNit.Visible = true;
+					txtNombre.Location = new Point(421, 36);
+					lblNombre.Location = new Point(311, 38);
+					txtNit.Location = new Point(807, 36);
+					lblNit.Location = new Point(740, 38);
+					gbxDatos.Size=new Size(1326, 90);
+					break;
+				case 1://Habilita el nit del gbxDatos
+					lblNit.Visible = true;
+					txtNit.Visible = true;
+					lblNombre2.Visible = false;
+					txtNombre.Visible = false;
+					txtNit.Location = new Point(648, 36);
+					lblNit.Location = new Point(579, 38);
+					gbxDatos.Size = new Size(1326, 90);
+					break;
+				case 2://habilita los botones despues de crear un nuevo cliente
+					btnBuscar.Enabled = true;
+					btnEditar.Enabled = true;
+					btnEliminar.Enabled = true;
+					break;
+				case 3://Habilita el nombre del gbxDatos
+					lblNombre.Visible = true;
+					txtNombre.Visible = true;
+					lblNit.Visible = false;
+					txtNit.Visible = false;
+					txtNombre.Location = new Point(648, 36);
+					lblNombre2.Location = new Point(538, 38);
+					gbxDatos.Size = new Size(1326, 90);
+					break;
+				case 4://Habilita los botones depues de buscar
+					btnNuevo.Enabled = true;
+					btnEditar.Enabled = true;
+					btnEliminar.Enabled = true;
+					break;
+			}
+		}
+		private void rbtNit_Click(object sender, EventArgs e)
+		{
+			BuscarMenu();
+		}
+		private void BuscarMenu()
+		{
+			gbxOpciones.Size = new Size(1326, 100);
+			panel3.Visible = false;
+			if (rbtNombre.Checked)
+			{
+				HabilitarControles(3);
+				BloquearControles(2);
 			}
 			else
 			{
-				if (rbtNit.Checked && txtNit.Text != "")
-				{
-					dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','nit')");
-					BloquearControles(0);
-					HabilitarControles(4);
-				}
-				else if(txtNombre.Text != "")
-				{
-					dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','nombre')");
-					BloquearControles(0);
-					HabilitarControles(4);
-				}
+				HabilitarControles(1);
+				BloquearControles(2);
 			}
-		}//btnBuscar
-		private void button5_Click(object sender, EventArgs e)
+		}
+
+		private void rbtNombre_Click(object sender, EventArgs e)
+		{
+			BuscarMenu();
+		}
+
+		private void btnNuevo_Click(object sender, EventArgs e)
 		{
 			if (btnNuevo.Text == "Nuevo")
 			{
@@ -73,96 +141,32 @@ namespace Ul_Granos_y_Mas
 				MessageBox.Show("Porfavor iserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','load')");
 		}
-		private void BloquearControles(int caso)
+
+		private void btnBuscar_Click(object sender, EventArgs e)
 		{
-			switch (caso)
+			if (gbxDatos.Height == 0)
 			{
-				case 0://Oculta todo el gbxDatos
-					gbxDatos.Size = new Size(1326, 0);
-					txtNit.Clear();
-					txtNombre.Clear();
-					break;
-				case 1://Bloquea el funcionamiento de todo menos btnNuevo
-					btnBuscar.Enabled = false;
-					btnEditar.Enabled = false;
-					btnELiminar.Enabled = false;
-					break;
-				case 2://Bloquea el funcionamiento de todo menos btnBuscar
-					btnNuevo.Enabled = false;
-					btnEditar.Enabled = false;
-					btnELiminar.Enabled = false;
-					break;
-			}
-		}
-		private void HabilitarControles(int caso)
-		{
-			switch (caso)
-			{
-				case 0://Habilita todo el gbxDatos
-					lblNit.Visible = true;
-					lblNombre2.Visible = true;
-					txtNombre.Visible = true;
-					txtNit.Visible = true;
-					txtNombre.Location = new Point(421, 36);
-					lblNombre.Location = new Point(311, 38);
-					txtNit.Location = new Point(807, 36);
-					lblNit.Location = new Point(740, 38);
-					gbxDatos.Size=new Size(1326, 90);
-					break;
-				case 1://Habilita el nit del gbxDatos
-					lblNit.Visible = true;
-					txtNit.Visible = true;
-					lblNombre2.Visible = false;
-					txtNombre.Visible = false;
-					txtNit.Location = new Point(648, 36);
-					lblNit.Location = new Point(579, 38);
-					gbxDatos.Size = new Size(1326, 90);
-					break;
-				case 2://habilita los botones despues de crear un nuevo cliente
-					btnBuscar.Enabled = true;
-					btnEditar.Enabled = true;
-					btnELiminar.Enabled = true;
-					break;
-				case 3://Habilita el nombre del gbxDatos
-					lblNombre.Visible = true;
-					txtNombre.Visible = true;
-					lblNit.Visible = false;
-					txtNit.Visible = false;
-					txtNombre.Location = new Point(648, 36);
-					lblNombre2.Location = new Point(538, 38);
-					gbxDatos.Size = new Size(1326, 90);
-					break;
-				case 4://Habilita los botones depues de buscar
-					btnNuevo.Enabled = true;
-					btnEditar.Enabled = true;
-					btnELiminar.Enabled = true;
-					break;
-			}
-		}
-		private void rbtNit_Click(object sender, EventArgs e)
-		{
-			BuscarMenu();
-		}
-		private void BuscarMenu()
-		{
-			gbxOpciones.Size = new Size(1326, 100);
-			panel3.Visible = false;
-			if (rbtNombre.Checked)
-			{
-				HabilitarControles(3);
-				BloquearControles(2);
+				gbxOpciones.Size = new Size(1326, 170);
+				panel3.Visible = true;
 			}
 			else
 			{
-				HabilitarControles(1);
-				BloquearControles(2);
+				if (rbtNit.Checked && txtNit.Text != "")
+				{
+					dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','nit')");
+					BloquearControles(0);
+					HabilitarControles(4);
+				}
+				else if (txtNombre.Text != "")
+				{
+					dgvClientes.DataSource = fn.llenarGrid("call sp_cliente('" + txtNit.Text + "', '" + txtNombre.Text.ToUpper() + "', '" + id + "','nombre')");
+					BloquearControles(0);
+					HabilitarControles(4);
+				}
 			}
 		}
-		private void rbtNombre_Click(object sender, EventArgs e)
-		{
-			BuscarMenu();
-		}
-		private void btnELiminar_Click(object sender, EventArgs e)
+
+		private void btnEliminar_Click_1(object sender, EventArgs e)
 		{
 			if (dgvClientes.SelectedRows.Count > 0)
 			{
@@ -176,7 +180,8 @@ namespace Ul_Granos_y_Mas
 			else
 				MessageBox.Show("Seleccione una columna", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
-		private void btnEditar_Click(object sender, EventArgs e)
+
+		private void btnEditar_Click_1(object sender, EventArgs e)
 		{
 			if (dgvClientes.SelectedRows.Count > 0)
 			{

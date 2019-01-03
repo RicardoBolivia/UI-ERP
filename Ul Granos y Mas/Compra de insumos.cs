@@ -20,44 +20,6 @@ namespace Ul_Granos_y_Mas
 			fn.LlenarComboBox("call sp_cliente('', '" + txtMes.Text.ToUpper() + "', '" + id + "', 'load')", cbxCliente,"NOMBRE");
 			dgvCompra.DataSource = fn.llenarGrid("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'load')");
 		}
-
-		private void btnNuevo_Click(object sender, EventArgs e)
-		{
-			if (btnNuevo.Text == "Nuevo")
-			{
-				btnNuevo.Text = "Guardar";
-				HabilitarControles(0);
-				BloquearControles(1);
-			}//Se habilita El guardado de un nuevo cliente
-			else if (btnNuevo.Text == "Guardar Edicion")
-			{
-				if (txtMes.Text !="" && fn.DateTimeSQL(dtpFecha) != "" && cbxCliente.Text.ToUpper() != "" && txtProyecto.Text.ToUpper() != "")
-				{
-					btnNuevo.Text = "Nuevo";
-					if (fn.actualizar("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'edit')"))
-						MessageBox.Show("Se actualizo correctamente la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-					else
-						MessageBox.Show("Error al actualizar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-				else
-					MessageBox.Show("Porfavor inserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				HabilitarControles(2);
-				BloquearControles(0);
-			}//Se actualiza un cliente
-			else if (txtMes.Text != "" && fn.DateTimeSQL(dtpFecha) != "" && cbxCliente.Text.ToUpper() != "" && txtProyecto.Text.ToUpper() != "")
-			{
-				if (fn.insertar("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'save')"))
-					MessageBox.Show("Se guardo correctamente en la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-				else
-					MessageBox.Show("Error al insertar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				btnNuevo.Text = "Nuevo";
-				HabilitarControles(2);
-				BloquearControles(0);
-			}//Se guarda un nuevo cliente
-			else
-				MessageBox.Show("Porfavor inserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-			dgvCompra.DataSource = fn.llenarGrid("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'load')");
-		}
 		private void dtpFecha_ValueChanged(object sender, EventArgs e)
 		{
 			txtMes.Text = Literal(dtpFecha.Value.Month);
@@ -118,13 +80,15 @@ namespace Ul_Granos_y_Mas
 				case 1://Bloquea el funcionamiento de todo menos btnNuevo
 					btnBuscar.Enabled = false;
 					btnEditar.Enabled = false;
-					btnELiminar.Enabled = false;
+					btnEliminar.Enabled = false;
+					btnVisualizar.Enabled = false;
 					break;
 				case 2://Bloquea el funcionamiento de todo menos btnBuscar
 					btnNuevo.Enabled = false;
 					btnEditar.Enabled = false;
-					btnELiminar.Enabled = false;
+					btnEliminar.Enabled = false;
 					pnlSubMenu.Visible = false;
+					btnVisualizar.Enabled = false;
 					break;
 			}
 		}
@@ -169,7 +133,8 @@ namespace Ul_Granos_y_Mas
 				case 2://habilita los botones despues de crear un nuevo cliente
 					btnBuscar.Enabled = true;
 					btnEditar.Enabled = true;
-					btnELiminar.Enabled = true;
+					btnEliminar.Enabled = true;
+					btnVisualizar.Enabled = true;
 					break;
 				case 3://Habilita el Cliente del gbxDatos
 					lblproyecto.Visible = false;
@@ -187,7 +152,8 @@ namespace Ul_Granos_y_Mas
 				case 4://Habilita los botones depues de buscar
 					btnNuevo.Enabled = true;
 					btnEditar.Enabled = true;
-					btnELiminar.Enabled = true;
+					btnEliminar.Enabled = true;
+					btnVisualizar.Enabled = true;
 					break;
 			}
 		}
@@ -206,7 +172,45 @@ namespace Ul_Granos_y_Mas
 				gbxOpciones.Size = new Size(1326, 90);	
 			}
 		}
-		private void btnBuscar_Click(object sender, EventArgs e)
+
+		private void btnNuevo_Click_1(object sender, EventArgs e)
+		{
+			if (btnNuevo.Text == "Nuevo")
+			{
+				btnNuevo.Text = "Guardar";
+				HabilitarControles(0);
+				BloquearControles(1);
+			}//Se habilita El guardado de un nuevo cliente
+			else if (btnNuevo.Text == "Guardar Edicion")
+			{
+				if (txtMes.Text != "" && fn.DateTimeSQL(dtpFecha) != "" && cbxCliente.Text.ToUpper() != "" && txtProyecto.Text.ToUpper() != "")
+				{
+					btnNuevo.Text = "Nuevo";
+					if (fn.actualizar("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'edit')"))
+						MessageBox.Show("Se actualizo correctamente la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+					else
+						MessageBox.Show("Error al actualizar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+				else
+					MessageBox.Show("Porfavor inserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}//Se actualiza un cliente
+			else if (txtMes.Text != "" && fn.DateTimeSQL(dtpFecha) != "" && cbxCliente.Text.ToUpper() != "" && txtProyecto.Text.ToUpper() != "")
+			{
+				if (fn.insertar("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'save')"))
+					MessageBox.Show("Se guardo correctamente en la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+				else
+					MessageBox.Show("Error al insertar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				btnNuevo.Text = "Nuevo";
+				HabilitarControles(2);
+				BloquearControles(0);
+				CambioPanel cambio = new CambioPanel(new tablaCompras(cbxCliente.Text, fn.ObtenerCampo("select *  from `cabecera compras` order by id desc limit 1; ")));
+			}//Se guarda un nuevo cliente
+			else
+				MessageBox.Show("Porfavor inserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			dgvCompra.DataSource = fn.llenarGrid("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'load')");
+		}
+
+		private void btnBuscar_Click_1(object sender, EventArgs e)
 		{
 			if (gbxDatos.Height == 0)
 			{
@@ -221,7 +225,7 @@ namespace Ul_Granos_y_Mas
 					BloquearControles(0);
 					HabilitarControles(4);
 				}
-				else 
+				else
 				{
 					dgvCompra.DataSource = fn.llenarGrid("call sp_cabecera('" + txtMes.Text + "', '" + fn.DateTimeSQL(dtpFecha) + "', '" + cbxCliente.Text.ToUpper() + "', '" + txtProyecto.Text.ToUpper() + "', '" + id + "', 'cliente')");
 					BloquearControles(0);
@@ -230,7 +234,7 @@ namespace Ul_Granos_y_Mas
 			}
 		}
 
-		private void btnELiminar_Click(object sender, EventArgs e)
+		private void btnEliminar_Click(object sender, EventArgs e)
 		{
 			if (dgvCompra.SelectedRows.Count > 0)
 			{
@@ -251,12 +255,20 @@ namespace Ul_Granos_y_Mas
 			{
 				txtMes.Text = dgvCompra.CurrentRow.Cells["MES"].Value.ToString();
 				txtProyecto.Text = dgvCompra.CurrentRow.Cells["PROYECTO"].Value.ToString();
-				dtpFecha.Text= dgvCompra.CurrentRow.Cells["FECHA"].Value.ToString();
+				dtpFecha.Text = dgvCompra.CurrentRow.Cells["FECHA"].Value.ToString();
 				cbxCliente.Text = dgvCompra.CurrentRow.Cells["CLIENTE"].Value.ToString();
 				id = dgvCompra.CurrentRow.Cells["id"].Value.ToString();
 				btnNuevo.Text = "Guardar Edicion";
 				BloquearControles(1);
 				HabilitarControles(0);
+			}
+		}
+
+		private void btnVisualizar_Click(object sender, EventArgs e)
+		{
+			if (dgvCompra.SelectedRows.Count > 0)
+			{
+				CambioPanel cambio = new CambioPanel(new tablaCompras(dgvCompra.CurrentRow.Cells["CLIENTE"].Value.ToString(), dgvCompra.CurrentRow.Cells["id"].Value.ToString()));
 			}
 		}
 	}

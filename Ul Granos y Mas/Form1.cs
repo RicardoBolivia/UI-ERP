@@ -5,13 +5,14 @@ using System.Windows.Forms;
 
 namespace Ul_Granos_y_Mas
 {
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-            SetStyle(ControlStyles.ResizeRedraw, true);
+	public partial class Form1 : Form
+	{
+		public Form1()
+		{
+			InitializeComponent();
+			CambioPanel.pnlFormPadre = this.pnlFormPadre;
 		}
+		
 		private int R = 255;   
 		private int B = 0;   
 		private int G = 0;
@@ -83,81 +84,77 @@ namespace Ul_Granos_y_Mas
 			this.pnlFormPadre.Controls.Add(fh);
 			this.pnlFormPadre.Tag = fh;
 			fh.Show();
-		}
-		private void btnBolsa_Click(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void cibBolsas_Click(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void btnCliente_Click(object sender, EventArgs e)
-		{
-			if (pcbPestaña.Location.Y != cibCliente.Location.Y)
-			{
-				AbrirFormInPanel(new Clientes());
-				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
-				pnlMenu.Width = 50;
-			}
-		}
-
-		private void cibCliente_Click(object sender, EventArgs e)
-		{
-			if (pcbPestaña.Location.Y != cibCliente.Location.Y)
-			{
-				AbrirFormInPanel(new Clientes());
-				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibCliente.Location.Y);
-				pnlMenu.Width = 50;
-			}
-		}
-			private void Form1_Load(object sender, EventArgs e)
+		}		
+		private void Form1_Load(object sender, EventArgs e)
 		{
 			Conexion cn = new Conexion();
 			if (!cn.Conectar())
 				System.Diagnostics.Process.Start("C:/wamp/wampmanager.exe");
 		}
 
-		private void btnProducto_Click(object sender, EventArgs e)
+		private void btnInicio_Click(object sender, EventArgs e)
 		{
-			if (pcbPestaña.Location.Y != cibProducto.Location.Y)
+
+		}
+
+		private void btnCliente_Click_1(object sender, EventArgs e)
+		{
+			if (pcbPestaña.Location.Y != btnInicio.Location.Y && pcbPestaña.Location.Y != btnCliente.Location.Y)
+			{
+				DialogResult resp = MessageBox.Show("Esta seguro de cambiar de pestaña, todos los datos que no se guardaron se eliminaran", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				if (resp == DialogResult.Yes)
+				{
+					AbrirFormInPanel(new Clientes());
+					pcbPestaña.Location = new Point(pcbPestaña.Location.X, btnCliente.Location.Y);
+					pnlMenu.Width = 50;
+				}
+			}
+			else
+			{
+				AbrirFormInPanel(new Clientes());
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, btnCliente.Location.Y);
+				pnlMenu.Width = 50;
+			}
+		}
+
+		private void btnProducto_Click_1(object sender, EventArgs e)
+		{
+			if (pcbPestaña.Location.Y != btnInicio.Location.Y && pcbPestaña.Location.Y != btnProducto.Location.Y)
+			{
+				DialogResult resp =  MessageBox.Show("Esta seguro de cambiar de pestaña, todos los datos que no se guardaron se eliminaran", "Granos y Mas", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+				if (resp == DialogResult.Yes)
+				{
+					AbrirFormInPanel(new Productos());
+					pcbPestaña.Location = new Point(pcbPestaña.Location.X, btnProducto.Location.Y);
+					pnlMenu.Width = 50;
+				}
+			}
+			else
 			{
 				AbrirFormInPanel(new Productos());
-				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, btnProducto.Location.Y);
 				pnlMenu.Width = 50;
 			}
 		}
 
-		private void cibProducto_Click(object sender, EventArgs e)
+		private void btnTablas_Click(object sender, EventArgs e)
 		{
-			if (pcbPestaña.Location.Y != cibProducto.Location.Y)
+			if (pcbPestaña.Location.Y != btnInicio.Location.Y && pcbPestaña.Location.Y != btnTablas.Location.Y)
 			{
-				AbrirFormInPanel(new Productos());
-				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibProducto.Location.Y);
-				pnlMenu.Width = 50;
+				DialogResult resp = MessageBox.Show("Esta seguro de cambiar de pestaña, todos los datos que no se guardaron se eliminaran", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				if (resp == DialogResult.Yes)
+				{
+					AbrirFormInPanel(new Compra_de_insumos());
+					pcbPestaña.Location = new Point(pcbPestaña.Location.X, btnTablas.Location.Y);
+					pnlMenu.Width = 50;
+				}
 			}
-		}
-
-		private void btnTabla_Click(object sender, EventArgs e)
-		{
-			if (pcbPestaña.Location.Y != cibTabla.Location.Y)
-			{
-				AbrirFormInPanel(new Compra_de_insumos());
-				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibTabla.Location.Y);
-				pnlMenu.Width = 50;
-			}
-		}
-
-		private void cibTabla_Click(object sender, EventArgs e)
-		{
-			if (pcbPestaña.Location.Y!= cibTabla.Location.Y)
+			else
 			{
 				AbrirFormInPanel(new Compra_de_insumos());
-				pcbPestaña.Location = new Point(pcbPestaña.Location.X, cibTabla.Location.Y);
+				pcbPestaña.Location = new Point(pcbPestaña.Location.X, btnTablas.Location.Y);
 				pnlMenu.Width = 50;
-			}			
+			} 
 		}
 	}
 }

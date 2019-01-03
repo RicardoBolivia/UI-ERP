@@ -14,72 +14,6 @@ namespace Ul_Granos_y_Mas
 			dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
 			fn.LlenarComboBox("call sp_cliente('', '" + txtNombre.Text.ToUpper() + "', '" + id + "', 'load')", cbxCliente,"NOMBRE");
 		}
-		private void button6_Click(object sender, EventArgs e)
-		{
-			if (gbxDatos.Height > 0)
-			{
-				if (rbtCliente.Checked && cbxCliente.Text != "-Escoja un Cliente-")
-				{
-					dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'cliente')");
-					BloquearControles(0);
-					HabilitarControles(4);
-				}
-				else if (rbtNombre.Checked && txtNombre.Text != "")
-				{
-					dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'nombre')");
-					BloquearControles(0);
-					HabilitarControles(4);
-				}
-				else if (rbtNombreCliente.Checked && cbxCliente.Text != "-Escoja un Cliente-" && txtNombre.Text != "")
-				{
-					dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'nombreCliente')");
-					BloquearControles(0);
-					HabilitarControles(4);
-				}
-			}
-			else
-			{
-				gbxOpciones.Size = new Size(1326, 195);
-				pnlSubMenu.Visible = true;
-			}
-		}		
-		private void btnNuevo_Click(object sender, EventArgs e)
-		{
-			if (btnNuevo.Text == "Nuevo")
-			{
-				btnNuevo.Text = "Guardar";
-				HabilitarControles(0);
-				BloquearControles(1);
-			}//Se habilita El guardado de un nuevo cliente
-			else if (btnNuevo.Text == "Guardar Edicion")
-			{
-				if (txtNombre.Text != "" && txtPrecioU.Text != "" && txtUnidad.Text != "" && nudDuracion.Value != 0 && cbxCliente.Text != "-Escoja un Cliente-" && txtPrecioProveedor.Text != "")
-				{
-					btnNuevo.Text = "Nuevo";
-					if (fn.actualizar("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'edit')"))
-						MessageBox.Show("Se actualizo correctamente la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-					else
-						MessageBox.Show("Error al actualizar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-				else
-					MessageBox.Show("Porfavor iserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				HabilitarControles(2);
-				BloquearControles(0);
-			}//Se actualiza un cliente
-			else if (txtNombre.Text != "" && txtPrecioU.Text != "" && txtUnidad.Text != "" && nudDuracion.Value != 0 && cbxCliente.Text != "-Escoja un Cliente-" && txtPrecioProveedor.Text != "")
-			{
-				if (fn.insertar("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'save')"))
-					MessageBox.Show("Se guardo correctamente en la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-				else
-					MessageBox.Show("Error al insertar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				btnNuevo.Text = "Nuevo";
-				HabilitarControles(2);
-				BloquearControles(0);
-			}//Se guarda un nuevo cliente
-			else
-				MessageBox.Show("Porfavor iserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-			dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
-		}
 		private void BloquearControles(int caso)
 		{
 			switch (caso)
@@ -95,13 +29,13 @@ namespace Ul_Granos_y_Mas
 					btnBuscar.Enabled = false;
 					btnEditar.Enabled = false;
 					btnEliminar.Enabled = false;
-					btnAcutalizar.Enabled = false;
+					btnActualizar.Enabled = false;
 					break;
 				case 2://Bloquea el funcionamiento de todo menos btnBuscar
 					btnNuevo.Enabled = false;
 					btnEditar.Enabled = false;
 					btnEliminar.Enabled = false;
-					btnAcutalizar.Enabled = false;
+					btnActualizar.Enabled = false;
 					break;
 			}
 		}
@@ -160,7 +94,7 @@ namespace Ul_Granos_y_Mas
 					btnBuscar.Enabled = true;
 					btnEditar.Enabled = true;
 					btnEliminar.Enabled = true;
-					btnAcutalizar.Enabled = true;
+					btnActualizar.Enabled = true;
 					break;
 				case 3://Habilita el Cliente del gbxDatos
 					lblDuracion.Visible = false;
@@ -186,7 +120,7 @@ namespace Ul_Granos_y_Mas
 					btnNuevo.Enabled = true;
 					btnEditar.Enabled = true;
 					btnEliminar.Enabled = true;
-					btnAcutalizar.Enabled = true;
+					btnActualizar.Enabled = true;
 					break;
 				case 5://Habilita el Nobre y el Cliente del gbxDatos
 					lblDuracion.Visible = false;
@@ -227,7 +161,95 @@ namespace Ul_Granos_y_Mas
 			HabilitarControles(5);
 			BloquearControles(2);
 		}
-		private void btnEditar_Click(object sender, EventArgs e)
+		private void btnActualizar_Click(object sender, EventArgs e)
+		{
+			dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
+		}
+
+		private void btnNuevo_Click_1(object sender, EventArgs e)
+		{
+			if (btnNuevo.Text == "Nuevo")
+			{
+				btnNuevo.Text = "Guardar";
+				HabilitarControles(0);
+				BloquearControles(1);
+			}//Se habilita El guardado de un nuevo cliente
+			else if (btnNuevo.Text == "Guardar Edicion")
+			{
+				if (txtNombre.Text != "" && txtPrecioU.Text != "" && txtUnidad.Text != "" && nudDuracion.Value != 0 && cbxCliente.Text != "-Escoja un Cliente-" && txtPrecioProveedor.Text != "")
+				{
+					btnNuevo.Text = "Nuevo";
+					if (fn.actualizar("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'edit')"))
+						MessageBox.Show("Se actualizo correctamente la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+					else
+						MessageBox.Show("Error al actualizar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+				else
+					MessageBox.Show("Porfavor iserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				HabilitarControles(2);
+				BloquearControles(0);
+			}//Se actualiza un cliente
+			else if (txtNombre.Text != "" && txtPrecioU.Text != "" && txtUnidad.Text != "" && nudDuracion.Value != 0 && cbxCliente.Text != "-Escoja un Cliente-" && txtPrecioProveedor.Text != "")
+			{
+				if (fn.insertar("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'save')"))
+					MessageBox.Show("Se guardo correctamente en la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+				else
+					MessageBox.Show("Error al insertar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				btnNuevo.Text = "Nuevo";
+				HabilitarControles(2);
+				BloquearControles(0);
+			}//Se guarda un nuevo cliente
+			else
+				MessageBox.Show("Porfavor iserte todos los campos correspondientes", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+			if (gbxDatos.Height > 0)
+			{
+				if (rbtCliente.Checked && cbxCliente.Text != "-Escoja un Cliente-")
+				{
+					dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'cliente')");
+					BloquearControles(0);
+					HabilitarControles(4);
+				}
+				else if (rbtNombre.Checked && txtNombre.Text != "")
+				{
+					dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'nombre')");
+					BloquearControles(0);
+					HabilitarControles(4);
+				}
+				else if (rbtNombreCliente.Checked && cbxCliente.Text != "-Escoja un Cliente-" && txtNombre.Text != "")
+				{
+					dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'nombreCliente')");
+					BloquearControles(0);
+					HabilitarControles(4);
+				}
+			}
+			else
+			{
+				gbxOpciones.Size = new Size(1326, 195);
+				pnlSubMenu.Visible = true;
+			}
+		}
+
+		private void btnEliminar_Click_1(object sender, EventArgs e)
+		{
+			if (dgvProducto.SelectedRows.Count > 0)
+			{
+				id = dgvProducto.CurrentRow.Cells["Id"].Value.ToString();
+				if (fn.eliminar("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'delete')"))
+					MessageBox.Show("Exito al eliminar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				else
+					MessageBox.Show("Error al eliminar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
+			}
+			else
+				MessageBox.Show("Seleccione una columna", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+		}
+
+		private void btnEditar_Click_1(object sender, EventArgs e)
 		{
 			if (dgvProducto.SelectedRows.Count > 0)
 			{
@@ -241,24 +263,6 @@ namespace Ul_Granos_y_Mas
 				btnNuevo.Text = "Guardar Edicion";
 				BloquearControles(1);
 				HabilitarControles(0);
-			}
-			else
-				MessageBox.Show("Seleccione una columna", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-		}
-		private void btnAcutalizar_Click(object sender, EventArgs e)
-		{
-			dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
-		}
-		private void btnEliminar_Click(object sender, EventArgs e)
-		{
-			if (dgvProducto.SelectedRows.Count > 0)
-			{
-				id = dgvProducto.CurrentRow.Cells["Id"].Value.ToString();
-				if (fn.eliminar("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'delete')"))
-					MessageBox.Show("Exito al eliminar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				else
-					MessageBox.Show("Error al eliminar con la base de datos", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				dgvProducto.DataSource = fn.llenarGrid("call sp_producto('" + txtNombre.Text.ToUpper() + "', '" + nudDuracion.Text + "', '" + txtUnidad.Text.ToUpper() + "', '" + txtPrecioU.Text + "', '" + cbxCliente.Text + "', '" + txtPrecioProveedor.Text + "', '" + id + "', 'load')");
 			}
 			else
 				MessageBox.Show("Seleccione una columna", "Granos y Mas", MessageBoxButtons.OK, MessageBoxIcon.Error);

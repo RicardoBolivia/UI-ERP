@@ -121,8 +121,14 @@
   <data name="restaurarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurarNF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="editarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editarNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CompraSFs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CompraSFs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinimizarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinimizarNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maximizarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximizarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,14 +136,29 @@
   <data name="informacionSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\informacionSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancelG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoTransparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoTransparente1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aceptarN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aceptarN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BolsasSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BolsasSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CalculadoraNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CalculadoraNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BuscarN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CalculadoraSF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CalculadoraSF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardarNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoSolo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoSolo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="restaurarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +168,12 @@
   </data>
   <data name="CerrarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CerrarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalculadoraNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalculadoraNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscarNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notasDeEntregaSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notasDeEntregaSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,11 +190,20 @@
   <data name="informacionNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\informacionNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="InicioSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InicioSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aceptarG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aceptarG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuscarR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borrarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borrarNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ClientesSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClientesSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancelN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MinimizarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinimizarSF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,32 +211,53 @@
   <data name="MenuSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maximizarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maximizarNF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardarSF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardarSF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="importarN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\importarN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ComprasNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ComprasNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuNF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MinimizarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinimizarNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="importarG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\importarG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maximizarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximizarNF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GraficasNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GraficasNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="borrarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borrarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GraficasSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GraficasSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoTransparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoTransparente1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InicioSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InicioSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CerrarNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CerrarNF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="guardarSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardarSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="manualSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manualSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ComprasNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ComprasNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BolsasNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BolsasNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ClientesNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClientesNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,13 +268,19 @@
   <data name="ProductoSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProductoSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BolsasNF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BolsasNF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buscarNF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscarNF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CalculadoraSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CalculadoraSF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoSolo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoSolo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BolsasSF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BolsasSF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recargaN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recargaN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recargarG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recargarG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

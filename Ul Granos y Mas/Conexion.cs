@@ -125,5 +125,21 @@ namespace Ul_Granos_y_Mas
 			comboBox1.DataSource = dt;
 			conexion.Close();
 		}
+		public string ObtenerCampo(string consulta)
+		{
+			string resp = "";
+			conexion.Close();
+			conexion.Open();
+			cmd = new MySqlCommand(consulta, conexion);
+			da = new MySqlDataAdapter(cmd);
+			dt = new DataTable();
+			da.Fill(dt);
+			try
+			{
+				resp = dt.Rows[0][0].ToString();
+			}catch { }
+			conexion.Close();
+			return resp;
+		}
 	}
 }

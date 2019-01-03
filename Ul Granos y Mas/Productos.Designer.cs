@@ -44,24 +44,25 @@
 			this.lblNombre = new System.Windows.Forms.Label();
 			this.txtNombre = new System.Windows.Forms.TextBox();
 			this.gbxOpciones = new System.Windows.Forms.GroupBox();
-			this.btnAcutalizar = new System.Windows.Forms.Button();
 			this.pnlSubMenu = new System.Windows.Forms.Panel();
 			this.rbtNombreCliente = new System.Windows.Forms.RadioButton();
 			this.rbtCliente = new System.Windows.Forms.RadioButton();
 			this.rbtNombre = new System.Windows.Forms.RadioButton();
 			this.pnlEspacio = new System.Windows.Forms.Panel();
 			this.lblNombreMenu = new System.Windows.Forms.Label();
-			this.btnEditar = new System.Windows.Forms.Button();
-			this.btnEliminar = new System.Windows.Forms.Button();
-			this.btnBuscar = new System.Windows.Forms.Button();
-			this.btnNuevo = new System.Windows.Forms.Button();
 			this.dgvProducto = new System.Windows.Forms.DataGridView();
+			this.btnActualizar = new MyImageButton.CustomImageButton();
+			this.btnEditar = new imageButton.buttonImage();
+			this.btnEliminar = new imageButton.buttonImage();
+			this.btnBuscar = new imageButton.buttonImage();
+			this.btnNuevo = new imageButton.buttonImage();
 			this.pnlCabecera.SuspendLayout();
 			this.gbxDatos.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
 			this.gbxOpciones.SuspendLayout();
 			this.pnlSubMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnActualizar)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pnlCabecera
@@ -102,7 +103,7 @@
 			this.gbxDatos.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
 			this.gbxDatos.Location = new System.Drawing.Point(0, 64);
 			this.gbxDatos.Name = "gbxDatos";
-			this.gbxDatos.Size = new System.Drawing.Size(1326, 136);
+			this.gbxDatos.Size = new System.Drawing.Size(1326, 0);
 			this.gbxDatos.TabIndex = 1;
 			this.gbxDatos.TabStop = false;
 			this.gbxDatos.Text = "Datos:";
@@ -208,34 +209,20 @@
 			// 
 			// gbxOpciones
 			// 
-			this.gbxOpciones.Controls.Add(this.btnAcutalizar);
-			this.gbxOpciones.Controls.Add(this.pnlSubMenu);
+			this.gbxOpciones.Controls.Add(this.btnActualizar);
 			this.gbxOpciones.Controls.Add(this.btnEditar);
 			this.gbxOpciones.Controls.Add(this.btnEliminar);
 			this.gbxOpciones.Controls.Add(this.btnBuscar);
 			this.gbxOpciones.Controls.Add(this.btnNuevo);
+			this.gbxOpciones.Controls.Add(this.pnlSubMenu);
 			this.gbxOpciones.Dock = System.Windows.Forms.DockStyle.Top;
 			this.gbxOpciones.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-			this.gbxOpciones.Location = new System.Drawing.Point(0, 200);
+			this.gbxOpciones.Location = new System.Drawing.Point(0, 64);
 			this.gbxOpciones.Name = "gbxOpciones";
 			this.gbxOpciones.Size = new System.Drawing.Size(1326, 90);
 			this.gbxOpciones.TabIndex = 3;
 			this.gbxOpciones.TabStop = false;
 			this.gbxOpciones.Text = "Opciones:";
-			// 
-			// btnAcutalizar
-			// 
-			this.btnAcutalizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnAcutalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
-			this.btnAcutalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAcutalizar.Location = new System.Drawing.Point(1301, 16);
-			this.btnAcutalizar.Name = "btnAcutalizar";
-			this.btnAcutalizar.Size = new System.Drawing.Size(25, 27);
-			this.btnAcutalizar.TabIndex = 6;
-			this.btnAcutalizar.Text = "a";
-			this.btnAcutalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnAcutalizar.UseVisualStyleBackColor = false;
-			this.btnAcutalizar.Click += new System.EventHandler(this.btnAcutalizar_Click);
 			// 
 			// pnlSubMenu
 			// 
@@ -315,58 +302,6 @@
 			this.lblNombreMenu.TabIndex = 0;
 			this.lblNombreMenu.Text = "Buscar por:";
 			// 
-			// btnEditar
-			// 
-			this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
-			this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEditar.Location = new System.Drawing.Point(964, 36);
-			this.btnEditar.Name = "btnEditar";
-			this.btnEditar.Size = new System.Drawing.Size(220, 50);
-			this.btnEditar.TabIndex = 3;
-			this.btnEditar.Text = "Editar";
-			this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnEditar.UseVisualStyleBackColor = false;
-			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-			// 
-			// btnEliminar
-			// 
-			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
-			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEliminar.Location = new System.Drawing.Point(692, 36);
-			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(220, 50);
-			this.btnEliminar.TabIndex = 2;
-			this.btnEliminar.Text = "Eliminar";
-			this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnEliminar.UseVisualStyleBackColor = false;
-			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-			// 
-			// btnBuscar
-			// 
-			this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
-			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnBuscar.Location = new System.Drawing.Point(420, 36);
-			this.btnBuscar.Name = "btnBuscar";
-			this.btnBuscar.Size = new System.Drawing.Size(220, 50);
-			this.btnBuscar.TabIndex = 1;
-			this.btnBuscar.Text = "Buscar";
-			this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnBuscar.UseVisualStyleBackColor = false;
-			this.btnBuscar.Click += new System.EventHandler(this.button6_Click);
-			// 
-			// btnNuevo
-			// 
-			this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
-			this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNuevo.Location = new System.Drawing.Point(148, 36);
-			this.btnNuevo.Name = "btnNuevo";
-			this.btnNuevo.Size = new System.Drawing.Size(220, 50);
-			this.btnNuevo.TabIndex = 0;
-			this.btnNuevo.Text = "Nuevo";
-			this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnNuevo.UseVisualStyleBackColor = false;
-			this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-			// 
 			// dgvProducto
 			// 
 			this.dgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -374,10 +309,99 @@
 			this.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(217)))));
 			this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dgvProducto.Location = new System.Drawing.Point(0, 290);
+			this.dgvProducto.Location = new System.Drawing.Point(0, 154);
 			this.dgvProducto.Name = "dgvProducto";
-			this.dgvProducto.Size = new System.Drawing.Size(1326, 370);
+			this.dgvProducto.Size = new System.Drawing.Size(1326, 506);
 			this.dgvProducto.TabIndex = 4;
+			// 
+			// btnActualizar
+			// 
+			this.btnActualizar.Image = global::Ul_Granos_y_Mas.Properties.Resources.recargaN;
+			this.btnActualizar.ImageHover = global::Ul_Granos_y_Mas.Properties.Resources.recargarG;
+			this.btnActualizar.ImageNormal = global::Ul_Granos_y_Mas.Properties.Resources.recargaN;
+			this.btnActualizar.Location = new System.Drawing.Point(1295, 21);
+			this.btnActualizar.Name = "btnActualizar";
+			this.btnActualizar.Size = new System.Drawing.Size(25, 25);
+			this.btnActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnActualizar.TabIndex = 8;
+			this.btnActualizar.TabStop = false;
+			this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+			// 
+			// btnEditar
+			// 
+			this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEditar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(143)))), ((int)(((byte)(18)))));
+			this.btnEditar.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.editarSF;
+			this.btnEditar.Image = global::Ul_Granos_y_Mas.Properties.Resources.editarNF;
+			this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnEditar.Location = new System.Drawing.Point(964, 37);
+			this.btnEditar.Name = "btnEditar";
+			this.btnEditar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnEditar.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.editarNF;
+			this.btnEditar.Size = new System.Drawing.Size(220, 50);
+			this.btnEditar.TabIndex = 7;
+			this.btnEditar.Text = "Editar";
+			this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnEditar.UseVisualStyleBackColor = false;
+			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+			// 
+			// btnEliminar
+			// 
+			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(143)))), ((int)(((byte)(18)))));
+			this.btnEliminar.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.borrarSF;
+			this.btnEliminar.Image = global::Ul_Granos_y_Mas.Properties.Resources.borrarNF;
+			this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnEliminar.Location = new System.Drawing.Point(692, 36);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnEliminar.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.borrarNF;
+			this.btnEliminar.Size = new System.Drawing.Size(220, 50);
+			this.btnEliminar.TabIndex = 7;
+			this.btnEliminar.Text = "Eliminar";
+			this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+			// 
+			// btnBuscar
+			// 
+			this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnBuscar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(143)))), ((int)(((byte)(18)))));
+			this.btnBuscar.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.BuscarR;
+			this.btnBuscar.Image = global::Ul_Granos_y_Mas.Properties.Resources.BuscarN;
+			this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBuscar.Location = new System.Drawing.Point(420, 36);
+			this.btnBuscar.Name = "btnBuscar";
+			this.btnBuscar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnBuscar.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.BuscarN;
+			this.btnBuscar.Size = new System.Drawing.Size(220, 50);
+			this.btnBuscar.TabIndex = 7;
+			this.btnBuscar.Text = "Buscar";
+			this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnBuscar.UseVisualStyleBackColor = false;
+			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+			// 
+			// btnNuevo
+			// 
+			this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNuevo.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(143)))), ((int)(((byte)(18)))));
+			this.btnNuevo.HoverImage = global::Ul_Granos_y_Mas.Properties.Resources.guardarSF;
+			this.btnNuevo.Image = global::Ul_Granos_y_Mas.Properties.Resources.guardarNF;
+			this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNuevo.Location = new System.Drawing.Point(148, 36);
+			this.btnNuevo.Name = "btnNuevo";
+			this.btnNuevo.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(20)))));
+			this.btnNuevo.NormalImage = global::Ul_Granos_y_Mas.Properties.Resources.guardarNF;
+			this.btnNuevo.Size = new System.Drawing.Size(220, 50);
+			this.btnNuevo.TabIndex = 7;
+			this.btnNuevo.Text = "Nuevo";
+			this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnNuevo.UseVisualStyleBackColor = false;
+			this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
 			// 
 			// Productos
 			// 
@@ -400,6 +424,7 @@
 			this.pnlSubMenu.ResumeLayout(false);
 			this.pnlSubMenu.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnActualizar)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -413,15 +438,11 @@
 		private System.Windows.Forms.Label lblNombre;
 		private System.Windows.Forms.TextBox txtNombre;
 		private System.Windows.Forms.GroupBox gbxOpciones;
-		private System.Windows.Forms.Button btnEditar;
 		private System.Windows.Forms.Panel pnlSubMenu;
 		private System.Windows.Forms.RadioButton rbtCliente;
 		private System.Windows.Forms.RadioButton rbtNombre;
 		private System.Windows.Forms.Panel pnlEspacio;
 		private System.Windows.Forms.Label lblNombreMenu;
-		private System.Windows.Forms.Button btnEliminar;
-		private System.Windows.Forms.Button btnBuscar;
-		private System.Windows.Forms.Button btnNuevo;
 		private System.Windows.Forms.DataGridView dgvProducto;
 		private System.Windows.Forms.TextBox txtPrecioU;
 		private System.Windows.Forms.Label lblPrecioU;
@@ -433,6 +454,10 @@
 		private System.Windows.Forms.TextBox txtPrecioProveedor;
 		private System.Windows.Forms.Label lblPrecioProveedor;
 		private System.Windows.Forms.RadioButton rbtNombreCliente;
-		private System.Windows.Forms.Button btnAcutalizar;
+		private imageButton.buttonImage btnEditar;
+		private imageButton.buttonImage btnEliminar;
+		private imageButton.buttonImage btnBuscar;
+		private imageButton.buttonImage btnNuevo;
+		private MyImageButton.CustomImageButton btnActualizar;
 	}
 }
